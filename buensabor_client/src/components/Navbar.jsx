@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "/logo.png";
 import { BiPhoneCall } from "react-icons/bi";
-import { FaRegUser } from "react-icons/fa";
 
 export const Navbar = () => {
+  {/*Handle Scroll Option*/}
+  const [isSticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setSticky(offset > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
+  }, []);
+  {/*Items NavBar*/}
   const navItems = (
     <>
       <li>
-        <a href="/">Inicio</a>
+        <a className="text-green" href="/">Inicio</a>
       </li>
       <li tabIndex={0}>
         <details>
           <summary>Menu</summary>
           <ul className="p-2">
             <li>
-              <a>All</a>
+              <a href="/menu">All</a>
             </li>
             <li>
               <a>Pizza</a>
@@ -56,8 +68,8 @@ export const Navbar = () => {
     </>
   );
   return (
-    <header className="max-w-screen-2xl container mx-auto">
-      <div className="navbar x1:px-24">
+    <header className="bg-white max-w-screen-2xl container mx-auto fixed top-0 right-0 transition-all duration-300 ease-in-out">
+      <div className={`navbar x1:px-24 ${isSticky ? "shadow mg-base-100 transition-all duration-300 ease-in-out" : ""}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -177,7 +189,11 @@ export const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn bg-green rounded-full px-6 text-white flex items-center gap-2 lg:flex hidden">
+          {/*Seccion Boton*/}
+          <a
+            className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex hidden"
+            style={{ border: "none" }}
+          >
             <BiPhoneCall />
             Contacto
           </a>
