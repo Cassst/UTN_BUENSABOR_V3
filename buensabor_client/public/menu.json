@@ -2,17 +2,17 @@
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img1.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36eeb9",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img2.png",
-        "category": "drinks",
+        "category": "bebidas",
         "price": 14.7
     },
     {
@@ -28,7 +28,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 12.5
     },
     {
@@ -68,7 +68,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 12.5
     },
     {
@@ -89,10 +89,10 @@
     },
     {
         "_id": "642c155b2c4774f05c36eea6",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img3.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 13.5
     },
     {
@@ -100,15 +100,15 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 12.5
     },
     {
         "_id": "642c155b2c4774f05c36ee89",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img2.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 13.5
     },
     {
@@ -116,7 +116,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 12.5
     },
     {
@@ -130,7 +130,7 @@
     {
         "_id": "642c155b2c4774f05c36ee81",
         "name": "Tuna Niçoise",
-        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "recipe": "Warm goats cheese and roasted vegetable Empanadas with black olive tapenade crostini",
         "image": "/images/recipes/img2.png",
         "category": "offered",
         "price": 10.5
@@ -140,15 +140,15 @@
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eea4",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img1.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 13.5
     },
     {
@@ -156,20 +156,20 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img2.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee87",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee83",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img1.png",
         "category": "offered",
@@ -185,18 +185,18 @@
     },
     {
         "_id": "642c155b2c4774f05c36eea8",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img3.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36eeba",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img1.png",
-        "category": "drinks",
+        "category": "bebidas",
         "price": 14.7
     },
     {
@@ -212,23 +212,23 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb0",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee8d",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img2.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 13.5
     },
     {
@@ -236,7 +236,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 12.5
     },
     {
@@ -244,7 +244,7 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img2.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 9.5
     },
     {
@@ -260,7 +260,7 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img3.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 9.5
     },
     {
@@ -268,23 +268,23 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb6",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img2.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36eeb8",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img3.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 14.7
     },
     {
@@ -297,32 +297,32 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee8b",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img2.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee8f",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img3.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 13.5
     },
     {
         "_id": "642c155b2c4774f05c36ee91",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans",
         "image": "/images/recipes/img1.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 14.7
     },
     {
         "_id": "642c155b2c4774f05c36ee97",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img2.png",
         "category": "pizza",
         "price": 14.7
@@ -340,28 +340,28 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img1.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 9.5
     },
     {
         "_id": "642c155b2c4774f05c36ee85",
         "name": "Tuna Niçoise",
-        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "recipe": "Warm goats cheese and roasted vegetable Empanadas with black olive tapenade crostini",
         "image": "/images/recipes/img2.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 10.5
     },
     {
         "_id": "642c155b2c4774f05c36ee93",
         "name": "Tuna Niçoise",
-        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "recipe": "Warm goats cheese and roasted vegetable Empanadas with black olive tapenade crostini",
         "image": "/images/recipes/img3.png",
         "category": "pizza",
         "price": 10.5
     },
     {
         "_id": "642c155b2c4774f05c36ee95",
-        "name": "Chicken and Walnut Salad",
+        "name": "Chicken and Walnut Empanadas",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "/images/recipes/img1.png",
         "category": "pizza",
@@ -380,7 +380,7 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 9.5
     },
     {
@@ -404,15 +404,15 @@
         "name": "Roasted Pork Belly",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "/images/recipes/img1.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eeb4",
         "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise Empanadas with French beans.",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 14.7
     },
     {
@@ -436,7 +436,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "/images/recipes/img1.png",
-        "category": "dessert",
+        "category": "hamburguesas",
         "price": 12.5
     },
     {
@@ -452,7 +452,7 @@
         "name": "Goats Cheese Pizza",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
-        "category": "salad",
+        "category": "Empanadas",
         "price": 14.5
     },
     {
@@ -460,7 +460,7 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 9.5
     },
     {
@@ -468,15 +468,15 @@
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 14.5
     },
     {
         "_id": "642c155b2c4774f05c36eeae",
         "name": "Tuna Niçoise",
-        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "recipe": "Warm goats cheese and roasted vegetable Empanadas with black olive tapenade crostini",
         "image": "/images/recipes/img1.png",
-        "category": "soup",
+        "category": "Lomos",
         "price": 10.5
     }
 ]
