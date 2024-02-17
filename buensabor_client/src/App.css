@@ -5,11 +5,23 @@
 /*text-red uppercase tracking-wide font-medium text-lg*/
 /*Title*/
 /*text-black text-4xl md:text-5xl font-bold my-2 md:leading-snug leading-snug*/
+/* Oculta la barra de desplazamiento en navegadores webkit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta la barra de desplazamiento en Firefox */
+html {
+  scrollbar-width: none;
+}
+
 :root {
   background-color: white !important;
 }
+/* Oculta la barra de desplazamiento en Edge e IE */
 body {
   font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
 }
 
 header {

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import logo from "/logo.png";
-import { BiPhoneCall } from "react-icons/bi";
+import { FaRegUserCircle } from "react-icons/fa";
+import Modal from "./Modal";
 
 export const Navbar = () => {
-  {/*Handle Scroll Option*/}
+  {
+    /*Handle Scroll Option*/
+  }
   const [isSticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +18,15 @@ export const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
     };
   }, []);
-  {/*Items NavBar*/}
+  {
+    /*Items NavBar*/
+  }
   const navItems = (
     <>
       <li>
-        <a className="text-green" href="/">Inicio</a>
+        <a className="text-green" href="/">
+          Inicio
+        </a>
       </li>
       <li tabIndex={0}>
         <details>
@@ -69,7 +76,13 @@ export const Navbar = () => {
   );
   return (
     <header className="bg-white max-w-screen-2xl container mx-auto fixed top-0 right-0 transition-all duration-300 ease-in-out">
-      <div className={`navbar x1:px-24 ${isSticky ? "shadow mg-base-100 transition-all duration-300 ease-in-out" : ""}`}>
+      <div
+        className={`navbar x1:px-24 ${
+          isSticky
+            ? "shadow mg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -160,43 +173,16 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-          {/*Seccion Perfil*/}
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar mr-3 flex items-center justify-center"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">Perfil</a>
-              </li>
-              <li>
-                <a>Ajustes</a>
-              </li>
-              <li>
-                <a>Salir</a>
-              </li>
-            </ul>
-          </div>
-          {/*Seccion Boton*/}
-          <a
-            className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex hidden"
+          {/*Boton Ingresar*/}
+          <button
+            className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex"
             style={{ border: "none" }}
+            onClick={() => document.getElementById("my_modal_5").showModal()}
           >
-            <BiPhoneCall />
-            Contacto
-          </a>
+            <FaRegUserCircle />
+            Ingresar
+          </button>
+          <Modal />
         </div>
       </div>
     </header>
