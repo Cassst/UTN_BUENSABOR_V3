@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-2xl container mx-auto x1:px-24 px-4 bg-white element">
+    <div className="max-w-screen-2xl container mx-auto x1:px-24 px-4 bg-white">
       <div className="py-24 flex flex-col md:flex-row-reverse justify-between items-center gap-8">
         {/*imagen*/}
         <div className="md:w-1/2">

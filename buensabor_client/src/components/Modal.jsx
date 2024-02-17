@@ -16,7 +16,11 @@ const Modal = () => {
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
       <div className="modal-box bg-white">
         <div className="modal-action flex flex-col justify-center mt-0">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body" method="dialog">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="card-body"
+            method="dialog"
+          >
             <h3 className="font-bold text-lg text-black">Ingresar Datos</h3>
             {/*Email*/}
             <div className="form-control">
@@ -62,10 +66,17 @@ const Modal = () => {
             </div>
             <p className="text-center my-2">
               ¿No posee una cuenta?{" "}
-              <Link to="/signup" className="underline text-red">
+              <Link to="/Signup" className="underline text-red">
                 Crear una ahora
               </Link>
             </p>
+            <button
+              htmlFor="my_modal_5"
+              onClick={() => document.getElementById("my_modal_5").close()}
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
           </form>
           {/*Redes Sociales*/}
           <div className="text-center space-x-3 mb-5">
