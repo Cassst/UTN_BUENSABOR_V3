@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import logo from "/logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import Modal from "./Modal";
+import { AuthContext } from "../contexts/AuthProvider.jsx";
+
 
 export const Navbar = () => {
-  {
-    /*Handle Scroll Option*/
-  }
   const [isSticky, setSticky] = useState(false);
+  const { user } = useContext(AuthContext);
+  console.log(user);
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -75,7 +76,7 @@ export const Navbar = () => {
     </>
   );
   return (
-    <header className="bg-white max-w-screen-2xl container mx-auto fixed top-0 right-0 transition-all duration-300 ease-in-out">
+    <header className="bg-white max-w-screen-2xl container mx-auto transition-all duration-300 ease-in-out">
       <div
         className={`navbar x1:px-24 ${
           isSticky

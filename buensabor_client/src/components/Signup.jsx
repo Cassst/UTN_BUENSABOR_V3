@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import Modal from "./Modal";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const Signup = () => {
   const {
@@ -11,7 +12,29 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const { createUser, login } = useContext(AuthContext);
+  //Redirigir de inicio a una pagina en especifico
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || "/";
+
+  const onSubmit = (data) => {
+    const email = data.email;
+    const pass = data.password;
+    createUser(email, pass)
+      .then((result) => {
+        const user = result.user;
+        alert("Cuenta creada con exito");
+        document.getElementById("my_modal_5").close();
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
   return (
     <div className="max-w-md shadow w-full mx-auto flex item-center justify-center my-20">
       <div className="modal-action flex flex-col justify-center mt-0">
@@ -74,7 +97,8 @@ const Signup = () => {
               Ingresar
             </button>
           </p>
-          <Link to="/"
+          <Link
+            to="/"
             className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
           >
             ✕

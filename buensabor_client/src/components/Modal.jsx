@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { MdPhoneIphone } from "react-icons/md";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { set, useForm } from "react-hook-form";
+import { AuthContext } from "../contexts/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Modal = () => {
   const {
@@ -10,8 +13,57 @@ const Modal = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const { signUpWithGmail, signUpWithPhone, signUpWithUser } =
+    useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  //Redirigir de inicio a una pagina en especifico
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  const from = location.state?.from?.pathname || "/";
+
+  //Ingreso por usuario
+  const onSubmit = (data) => {
+    const email = data.email;
+    const pass = data.password;
+    //console.log("email: " + email + " pass: " + pass);
+    signUpWithUser(email, pass)
+      .then((result) => {
+        const user = result.user;
+        alert("Ingreso Correctamente");
+        document.getElementById("my_modal_5").close();
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage("Datos Incorrectos, revise sus credenciales");
+      });
+  };
+
+  //Ingreso por gmail
+  const handleLogin = () => {
+    signUpWithGmail()
+      .then((result) => {
+        const user = result.user;
+        alert("Ingreso Correctamente");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(error);
+      });
+  };
+  //Ingreso por facebook
+  //navigate(from, { replace: true });
+  //Ingreso por telefono
+  //navigate(from, { replace: true });
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
       <div className="modal-box bg-white">
@@ -54,7 +106,13 @@ const Modal = () => {
               </label>
             </div>
             {/*Seccion Error*/}
-
+            {errorMessage ? (
+              <p className="text-red text-xs italic text-center">
+                {errorMessage}
+              </p>
+            ) : (
+              ""
+            )}
             {/*Boton Ingresar*/}
             <div className="form-control mt-6">
               <input
@@ -80,11 +138,17 @@ const Modal = () => {
           </form>
           {/*Redes Sociales*/}
           <div className="text-center space-x-3 mb-5">
-            <button className="btn btn-circle btn-outline hover:bg-green hover:text-white">
+            <button
+              className="btn btn-circle btn-outline hover:bg-green hover:text-white"
+              onClick={handleLogin}
+            >
               <FaGoogle />
             </button>
             <button className="btn btn-circle btn-outline hover:bg-green hover:text-white">
               <FaFacebookF />
+            </button>
+            <button className="btn btn-circle btn-outline hover:bg-green hover:text-white">
+              <MdPhoneIphone />
             </button>
           </div>
         </div>
