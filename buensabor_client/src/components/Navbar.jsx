@@ -76,12 +76,10 @@ export const Navbar = () => {
     </>
   );
   return (
-    <header className="bg-white max-w-screen-2xl container mx-auto transition-all duration-300 ease-in-out">
+    <header className="navbar-wrapper bg-white max-w-screen-2xl container mx-auto transition-all duration-300 ease-in-out">
       <div
-        className={`navbar x1:px-24 ${
-          isSticky
-            ? "shadow mg-base-100 transition-all duration-300 ease-in-out"
-            : ""
+        className={`navbar x1:px-24 sticky top-0 ${
+          isSticky ? "shadow mg-base-100" : ""
         }`}
       >
         <div className="navbar-start">
@@ -176,10 +174,10 @@ export const Navbar = () => {
           </div>
           {/*Boton Ingresar*/}
           {user ? (
-            <Profile user ={user}/>
+            <Profile user={user} />
           ) : (
             <button
-              className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex"
+              className="btn flex items-center gap-2 rounded-full px-6 bg-green text-white"
               style={{ border: "none" }}
               onClick={() => document.getElementById("my_modal_5").showModal()}
             >

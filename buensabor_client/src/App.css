@@ -36,3 +36,8 @@ div.heartStart {
   color: #39db4a;
   font-weight: 800;
 }
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegúrate de que el z-index sea mayor que cualquier otro elemento en la página */
+}
