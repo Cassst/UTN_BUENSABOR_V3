@@ -3,7 +3,7 @@ import logo from "/logo.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import Modal from "./Modal";
 import { AuthContext } from "../contexts/AuthProvider.jsx";
-
+import Profile from "./Profile.jsx";
 
 export const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
@@ -175,14 +175,18 @@ export const Navbar = () => {
             </div>
           </div>
           {/*Boton Ingresar*/}
-          <button
-            className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex"
-            style={{ border: "none" }}
-            onClick={() => document.getElementById("my_modal_5").showModal()}
-          >
-            <FaRegUserCircle />
-            Ingresar
-          </button>
+          {user ? (
+            <Profile user ={user}/>
+          ) : (
+            <button
+              className="btn bg-green rounded-full px-3 text-white flex items-center gap-2 lg:flex"
+              style={{ border: "none" }}
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+            >
+              <FaRegUserCircle />
+              Ingresar
+            </button>
+          )}
           <Modal />
         </div>
       </div>

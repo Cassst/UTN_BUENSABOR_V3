@@ -47,6 +47,7 @@ const Modal = () => {
       .then((result) => {
         const user = result.user;
         alert("Ingreso Correctamente");
+        document.getElementById("my_modal_5").close();
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -61,8 +62,10 @@ const Modal = () => {
       });
   };
   //Ingreso por facebook
+  //document.getElementById("my_modal_5").close();
   //navigate(from, { replace: true });
   //Ingreso por telefono
+  //document.getElementById("my_modal_5").close();
   //navigate(from, { replace: true });
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
