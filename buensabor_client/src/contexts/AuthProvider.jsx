@@ -13,26 +13,29 @@ import {
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
+// Creamos el contexto de autenticación
 export const AuthContext = createContext();
-// Initialize Firebase Authentication and get a reference to the service
+
+// Inicializamos Firebase Authentication
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
+  // Definimos el estado del usuario y del proceso de carga
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  //Crear Cuenta
+  // Función para crear una cuenta de usuario
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  //Ingresar con gmail
+  // Función para iniciar sesión con Google
   const signUpWithGmail = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  //Ingresar con Telefono
+  // Función para iniciar sesión con teléfono
   const signUpWithPhone = () => {
     return (window.recaptchaVerifier = new RecaptchaVerifier(
       auth,
@@ -41,18 +44,17 @@ const AuthProvider = ({ children }) => {
     ));
   };
 
-  //Ingresar con usuario y contraseña
+  // Función para iniciar sesión con usuario y contraseña
   const signUpWithUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  //Cerrar sesión
-
+  // Función para cerrar sesión
   const logOut = () => {
     signOut(auth);
   };
 
-  //Actualizar Perfil
+  // Función para actualizar el perfil del usuario
   const updateUserProfile = (name, photoURL, address, cuit, email) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -63,22 +65,29 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-  //corroborar ingreso de usuarios
+  // Efecto para comprobar el estado de autenticación del usuario
   useEffect(() => {
+    // Suscribimos un listener para el cambio de estado de autenticación
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      // Si hay un usuario autenticado
       if (currentUser) {
+        // Actualizamos el estado del usuario y finalizamos la carga
         setUser(currentUser);
         setLoading(false);
+        //console.log("User signed in:", currentUser);
       } else {
-        // User is signed out
-        // ...
+        // Si no hay un usuario autenticado, dejamos el estado de carga en true
+        setLoading(false);
+        //console.log("User signed out");
       }
+      //console.log("Loading:", loading);
     });
-    return () => {
-      return unsubscribe();
-    };
-  }, []);
+    // Devolvemos la función de limpieza para evitar fugas de memoria
+    //console.log("onAuthStateChanged unsubscribed");
+    return () => unsubscribe();
+  }, [loading]);
 
+  // Objeto con la información de autenticación y funciones relacionadas
   const authInfo = {
     user,
     createUser,
@@ -89,6 +98,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     loading,
   };
+
+  // Renderizamos el proveedor de contexto con su valor y los componentes hijos
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
